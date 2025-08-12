@@ -45,9 +45,9 @@ final class CreateStreamedResponse implements ResponseContract
 
         return new self(
             $attributes['id'] ?? null,
-            $attributes['object'],
+            $attributes['object'] ?? '',
             $attributes['created'],
-            $attributes['model'],
+            $attributes['model'] ?? '',
             $choices,
             isset($attributes['usage']) ? CreateResponseUsage::from($attributes['usage']) : null,
         );
